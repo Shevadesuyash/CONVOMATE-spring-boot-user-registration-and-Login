@@ -55,6 +55,7 @@ spring.datasource.password=<your_password>
 
 Replace <your_username> and <your_password> with your MySQL username and password.
 
+
 ## Build and Run
 
 To build and run the project, execute the following commands:
@@ -71,3 +72,25 @@ Once the application is running, you can:
 2. Log in to the system using your registered email and password.
 3. Access the users.html page if you have the admin role assigned.
 4. View the list of registered users on the users.html page.
+
+
+## Running spring boot app 
+![Screenshot 2024-06-09 154043](https://github.com/Shevadesuyash/CONVOMATE-spring-boot-user-registration-and-Login/assets/100865990/8df5b084-a7a9-431b-bae0-20a3bbcf2836)
+
+## Register page
+![Screenshot 2024-06-09 154206](https://github.com/Shevadesuyash/CONVOMATE-spring-boot-user-registration-and-Login/assets/100865990/7809ca70-6415-47b4-9c70-9c27bd53efcd)
+
+## login page 
+![image](https://github.com/Shevadesuyash/CONVOMATE-spring-boot-user-registration-and-Login/assets/100865990/5f2ff1bf-9719-4fe5-be63-6f8e514bb513)
+
+## User data
+![Screenshot 2024-06-09 154313](https://github.com/Shevadesuyash/CONVOMATE-spring-boot-user-registration-and-Login/assets/100865990/711118d2-1a59-4558-842c-1e6cfc7041d1)
+
+
+
+## NOTE: PROJECT UNDER DEVELOPMENT
+
+This project is currently in progress, and we're working diligently to bring you all the updates and modules soon. Stay tuned for the latest information and developments.
+
+Thank you for your patience!
+
