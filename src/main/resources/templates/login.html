@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="utf-8">
+  <title>Convomate - A Voice Communication Bot</title>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <meta content="" name="keywords">
+  <meta content="" name="description">
+
+  <!-- Favicons -->
+  <link href="img/robot web icon.jpeg" rel="icon">
+  <link href="img/robot web icon.jpeg" rel="robot hello">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,700,700i|Raleway:300,400,500,700,800|Montserrat:300,400,700" rel="stylesheet">
+
+  <!-- Bootstrap CSS File -->
+  <link href="lib/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Libraries CSS Files -->
+  <link href="lib/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+  <link href="lib/animate/animate.min.css" rel="stylesheet">
+  <link href="lib/ionicons/css/ionicons.min.css" rel="stylesheet">
+  <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+  <link href="lib/magnific-popup/magnific-popup.css" rel="stylesheet">
+  <link href="lib/ionicons/css/ionicons.min.css" rel="stylesheet">
+
+  <!-- Main Stylesheet File -->
+  <link href="css/style.css" rel="stylesheet">
+</head>
+
+<body id="body">
+
+  <!--==========================
+    Top Bar
+  ============================-->
+  <section id="topbar" class="d-none d-lg-block">
+    <div class="container clearfix">
+      <div class="contact-info float-left">
+        <i class="fa fa-envelope-o"></i> <a href="mailto:contact@example.com">convomate@star.com</a>
+        <i class="fa fa-phone"></i> +1 5589 55488 55
+      </div>
+      <div class="social-links float-right">
+        <a href="#" class="twitter"><i class="fa fa-twitter"></i></a>
+        <a href="#" class="facebook"><i class="fa fa-facebook"></i></a>
+        <a href="#" class="instagram"><i class="fa fa-instagram"></i></a>
+        <a href="#" class="google-plus"><i class="fa fa-google-plus"></i></a>
+        <a href="#" class="linkedin"><i class="fa fa-linkedin"></i></a>
+      </div>
+    </div>
+  </section>
+
+  <!--==========================
+    Header
+  ============================-->
+  <header id="header">
+    <div class="container">
+
+      <div id="logo" class="pull-left">
+        <h1><a th:href="@{/index}" class="scrollto">Convo<span>Mate</span></a></h1>
+       
+        <!-- <a th:href="@{/index}"><img src="img/logo.png" alt="" title="" /></a>-->
+      </div>
+
+      <nav id="nav-menu-container">
+        <ul class="nav-menu">
+          <li class="menu-active"><a th:href="@{/index}">Home</a></li>
+          <li><a th:href="@{/index}">About Us</a></li>
+          <li><a th:href="@{/index}">Team</a></li>
+          <li class="menu-has-children"><a href="#">Models</a>
+            <ul>
+              <li><a href="#">Voice Convomate</a></li>
+              <li><a href="#">Paragraph checker</a></li>
+              <li><a href="#">Learning basics of Languages</a></li>
+              <li><a href="#">Text to Voice</a></li>
+            </ul>
+          </li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header><br><br>
+
+  <!--==========================
+    Login Section
+  ============================-->
+  <section id="intro">
+    <div class="intro-content">
+      <form th:action="@{/login}" method="post">
+        <div class="container" style="text-align:right;">
+          <h1 style="color:blue; text-align:right; padding:25px; font-weight:2000;">Login</h1>
+          <div th:if="${param.error}">
+            <div class="alert alert-danger">Invalid Email or Password</div>
+          </div>
+          <div th:if="${param.logout}">
+            <div class="alert alert-success">You have been logged out.</div>
+          </div>
+          <label for="username"><b>Username</b></label>
+          <input type="text" placeholder="Enter Username" name="username" required><br><br>
+          <label for="password"><b>Password</b></label>
+          <input type="password" placeholder="Enter Password" name="password" required><br><br>
+          <div>
+            <button type="submit" class="btn btn-primary">Login</button>
+            <span>Not registered? 
+              <a th:href="@{/register}">Register/Signup here</a>
+
+            </span>
+          </div>
+        </div>
+      </form>
+    </div>
+
+    <div id="intro-carousel" class="owl-carousel">
+      <div class="item" style="background-image: url('img/5.jpeg');"></div>
+    </div>
+  </section>
+
+  <main id="main"><br><br>
+
+  <a href="#" class="back-to-top"><i class="fa fa-chevron-up"></i></a>
+
+  <!-- JavaScript Libraries -->
+  <script src="lib/jquery/jquery.min.js"></script>
+  <script src="lib/jquery/jquery-migrate.min.js"></script>
+  <script src="lib/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="lib/easing/easing.min.js"></script>
+  <script src="lib/superfish/hoverIntent.js"></script>
+  <script src="lib/superfish/superfish.min.js"></script>
+  <script src="lib/wow/wow.min.js"></script>
+  <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+  <script src="lib/magnific-popup/magnific-popup.min.js"></script>
+  <script src="lib/sticky/sticky.js"></script>
+  <script src="contactform/contactform.js"></script>
+  <script src="js/main.js"></script>
+
+</body>
+</html>

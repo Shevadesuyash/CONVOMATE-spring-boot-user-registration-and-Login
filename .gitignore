@@ -1,0 +1,19 @@
+# IDE files
+.idea/
+.vscode/
+
+# Compiled binaries
+target/
+build/
+
+# Dependency directories
+node_modules/
+lib/
+
+# Configuration files
+application.properties
+.env
+
+# Logs and temporary files
+*.log
+*.tmp
