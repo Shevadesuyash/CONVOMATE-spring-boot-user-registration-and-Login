@@ -1,127 +1,127 @@
 <!DOCTYPE html>
 <html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
-  <meta charset="utf-8">
-  <title>Convomate - A Voice Communication Bot</title>
-  <meta content="width=device-width, initial-scale=1.0" name="viewport">
-  <meta content="" name="keywords">
-  <meta content="" name="description">
+    <meta charset="utf-8">
+    <title>Convomate - A Voice Communication Bot</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="" name="keywords">
+    <meta content="" name="description">
 
-  <!-- Favicons -->
-  <link href="img/robot_web_icon.jpeg" rel="icon">
-  <link href="img/robot_web_icon.jpeg" rel="robot hello">
+    <!-- Favicons -->
+    <link href="img/robot_web_icon.jpeg" rel="icon">
+    <link href="img/robot_web_icon.jpeg" rel="robot hello">
 
-  <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,700,700i|Raleway:300,400,500,700,800|Montserrat:300,400,700" rel="stylesheet">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,700,700i|Raleway:300,400,500,700,800|Montserrat:300,400,700"
+          rel="stylesheet">
 
-  <!-- Bootstrap CSS File -->
-  <link href="lib/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap CSS File -->
+    <link href="lib/bootstrap/css/bootstrap.min.css" rel="stylesheet">
 
-  <!-- Libraries CSS Files -->
-  <link href="lib/font-awesome/css/font-awesome.min.css" rel="stylesheet">
-  <link href="lib/animate/animate.min.css" rel="stylesheet">
-  <link href="lib/ionicons/css/ionicons.min.css" rel="stylesheet">
-  <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
-  <link href="lib/magnific-popup/magnific-popup.css" rel="stylesheet">
-  <link href="lib/ionicons/css/ionicons.min.css" rel="stylesheet">
+    <!-- Libraries CSS Files -->
+    <link href="lib/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+    <link href="lib/animate/animate.min.css" rel="stylesheet">
+    <link href="lib/ionicons/css/ionicons.min.css" rel="stylesheet">
+    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+    <link href="lib/magnific-popup/magnific-popup.css" rel="stylesheet">
+    <link href="lib/ionicons/css/ionicons.min.css" rel="stylesheet">
 
-  <!-- Main Stylesheet File -->
-  <link href="css/style.css" rel="stylesheet">
+    <!-- Main Stylesheet File -->
+    <link href="css/style.css" rel="stylesheet">
 </head>
 
 <body id="body">
-  <!-- Top Bar -->
-  <section id="topbar" class="d-none d-lg-block">
+<!-- Top Bar -->
+<section class="d-none d-lg-block" id="topbar">
     <div class="container clearfix">
-      <div class="contact-info float-left">
-        <i class="fa fa-envelope-o"></i> <a href="mailto:contact@example.com">convomate@star.com</a>
-        <i class="fa fa-phone"></i> +1 5589 55488 55
-      </div>
-      <div class="social-links float-right">
-        <a href="#" class="twitter"><i class="fa fa-twitter"></i></a>
-        <a href="#" class="facebook"><i class="fa fa-facebook"></i></a>
-        <a href="#" class="instagram"><i class="fa fa-instagram"></i></a>
-        <a href="#" class="google-plus"><i class="fa fa-google-plus"></i></a>
-        <a href="#" class="linkedin"><i class="fa fa-linkedin"></i></a>
-      </div>
-    </div>
-  </section>
-
-  <!-- Header -->
-  <header id="header">
-    <div class="container">
-      <div id="logo" class="pull-left">
-        <h1><a th:href="@{/index}" class="scrollto">Convo<span>mate</span></a></h1>
-        <!-- Uncomment below if you prefer to use an image logo -->
-        <!-- <a th:href="@{/index}"><img src="img/robot_web_icon.jpeg" alt="" title="" /></a>-->
-      </div>
-
-      <nav id="nav-menu-container">
-        <ul class="nav-menu">
-          <li class="menu-active"><a th:href="@{/}">Home</a></li>
-          <li><a th:href="@{/index}">Login</a></li>
-          <li><a th:href="@{/index}">About Us</a></li>
-          <li><a th:href="@{/index}">Team</a></li>
-          <li class="menu-has-children"><a th:href="@{/login}">Models</a>
-            <ul>
-              <li><a th:href="@{/}">Voice Convomate</a></li>
-              <li><a th:href="@{/}">Translator</a></li>
-              <li><a th:href="@{/}">Learning Basics of Languages</a></li>
-              <li><a th:href="@{/}">Text to Voice</a></li>
-            </ul>
-          </li>
-          <li><a th:href="@{/index}">Contact</a></li>
-        </ul>
-      </nav><!-- #nav-menu-container -->
-    </div>
-  </header><!-- #header -->
-
-  <!-- Intro Section -->
-  <section id="intro">
-    <div class="intro-content">
-      <form role="form"  th:action="@{/register/save}" method="post" th:object="${user}">
-        <div class="container" style="text-align:right;">
-          <h1 style="color:blue;text-align:right;padding:25px;font-weight:3000px">Registration</h1>
-          
-          <label for="firstName"><b>First Name</b></label>
-          <input type="text" placeholder="First Name" th:field="*{firstName}" id="firstName" required><br>
-          <p th:errors = "*{firstName}" class="text-danger"
-                           th:if="${#fields.hasErrors('firstName')}"></p>
-          <label for="lastName"><b>Last Name</b></label>
-          <input id="lastName" type="text" placeholder="Last Name" th:field="*{lastName}" required><br>
-          <p th:errors = "*{lastName}" class="text-danger"
-                           th:if="${#fields.hasErrors('lastName')}"></p>
-          <label for="email"><b>Email</b></label>
-          <input id="email" type="email" placeholder="Email" th:field="*{email}" required><br>
-          <p th:errors = "*{email}" class="text-danger"
-                           th:if="${#fields.hasErrors('email')}"></p>
-         
-          
-          
-          <label for="password"><b>Password</b></label>
-          <input id="password" type="password" placeholder="Password" th:field="*{password}" required><br>
-           <p th:errors = "*{password}" class="text-danger"
-                           th:if="${#fields.hasErrors('password')}"></p>
-          
-          
-          <button type="submit" class="btn btn-primary">Register</button>
-          <span>Already registered? <a th:href="@{/login}">Login here</a></span>
+        <div class="contact-info float-left">
+            <i class="fa fa-envelope-o"></i> <a href="mailto:contact@example.com">convomate@star.com</a>
+            <i class="fa fa-phone"></i> +1 5589 55488 55
         </div>
-      </form>
+        <div class="social-links float-right">
+            <a class="twitter" href="#"><i class="fa fa-twitter"></i></a>
+            <a class="facebook" href="#"><i class="fa fa-facebook"></i></a>
+            <a class="instagram" href="#"><i class="fa fa-instagram"></i></a>
+            <a class="google-plus" href="#"><i class="fa fa-google-plus"></i></a>
+            <a class="linkedin" href="#"><i class="fa fa-linkedin"></i></a>
+        </div>
+    </div>
+</section>
+
+<!-- Header -->
+<header id="header">
+    <div class="container">
+        <div class="pull-left" id="logo">
+            <h1><a class="scrollto" th:href="@{/index}">Convo<span>mate</span></a></h1>
+            <!-- Uncomment below if you prefer to use an image logo -->
+            <!-- <a th:href="@{/index}"><img src="img/robot_web_icon.jpeg" alt="" title="" /></a>-->
+        </div>
+
+        <nav id="nav-menu-container">
+            <ul class="nav-menu">
+                <li class="menu-active"><a th:href="@{/}">Home</a></li>
+                <li><a th:href="@{/index}">Login</a></li>
+                <li><a th:href="@{/index}">About Us</a></li>
+                <li><a th:href="@{/index}">Team</a></li>
+                <li class="menu-has-children"><a th:href="@{/login}">Models</a>
+                    <ul>
+                        <li><a th:href="@{/}">Voice Convomate</a></li>
+                        <li><a th:href="@{/}">Translator</a></li>
+                        <li><a th:href="@{/}">Learning Basics of Languages</a></li>
+                        <li><a th:href="@{/}">Text to Voice</a></li>
+                    </ul>
+                </li>
+                <li><a th:href="@{/index}">Contact</a></li>
+            </ul>
+        </nav><!-- #nav-menu-container -->
+    </div>
+</header><!-- #header -->
+
+<!-- Intro Section -->
+<section id="intro">
+    <div class="intro-content">
+        <form method="post" role="form" th:action="@{/register/save}" th:object="${user}">
+            <div class="container" style="text-align:right;">
+                <h1 style="color:blue;text-align:right;padding:25px;font-weight:3000px">Registration</h1>
+
+                <label for="firstName"><b>First Name</b></label>
+                <input id="firstName" placeholder="First Name" required th:field="*{firstName}" type="text"><br>
+                <p class="text-danger" th:errors="*{firstName}"
+                   th:if="${#fields.hasErrors('firstName')}"></p>
+                <label for="lastName"><b>Last Name</b></label>
+                <input id="lastName" placeholder="Last Name" required th:field="*{lastName}" type="text"><br>
+                <p class="text-danger" th:errors="*{lastName}"
+                   th:if="${#fields.hasErrors('lastName')}"></p>
+                <label for="email"><b>Email</b></label>
+                <input id="email" placeholder="Email" required th:field="*{email}" type="email"><br>
+                <p class="text-danger" th:errors="*{email}"
+                   th:if="${#fields.hasErrors('email')}"></p>
+
+
+                <label for="password"><b>Password</b></label>
+                <input id="password" placeholder="Password" required th:field="*{password}" type="password"><br>
+                <p class="text-danger" th:errors="*{password}"
+                   th:if="${#fields.hasErrors('password')}"></p>
+
+
+                <button class="btn btn-primary" type="submit">Register</button>
+                <span>Already registered? <a th:href="@{/login}">Login here</a></span>
+            </div>
+        </form>
     </div>
     <div th:if="${param.success}">
-                <div class="alert alert-info">
-                    You have successfully registered our app!
-                </div>
-            </div>
-    <div id="intro-carousel" class="owl-carousel">
-      <img src="img/4.jpeg" alt="Registration Image" style="width: 50%; height: 50%; padding-left: 200px;">
+        <div class="alert alert-info">
+            You have successfully registered our app!
+        </div>
     </div>
-  </section><!-- #intro -->
+    <div class="owl-carousel" id="intro-carousel">
+        <img alt="Registration Image" src="img/4.jpeg" style="width: 50%; height: 50%; padding-left: 200px;">
+    </div>
+</section><!-- #intro -->
 
-  <main id="main">
+<main id="main">
     <br><br>
-    <a href="#" class="back-to-top"><i class="fa fa-chevron-up"></i></a>
+    <a class="back-to-top" href="#"><i class="fa fa-chevron-up"></i></a>
 
     <!-- JavaScript Libraries -->
     <script src="lib/jquery/jquery.min.js"></script>
@@ -140,6 +140,6 @@
 
     <!-- Template Main Javascript File -->
     <script src="js/main.js"></script>
-  </main>
+</main>
 </body>
 </html>
